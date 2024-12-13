@@ -15,6 +15,45 @@ Example: **git pull origin master** (branch_name = master)
 
 Example: **git push origin master** (branch_name = master)
 
+## Version Check
+> `git --version`
+
+## Configure Git
+> `git config --global user.name "nabi"`
+
+> `git config --global user.email "nabi@gmail.com"`
+
+## Initialize Git
+> `git init`
+
+## Git Staging Environment
+> `git add file_name` **only for a single file**
+
+> `git add --all` **All files**
+
+> `git add -A` **All files**
+
+> `git add .` **All files in shorthand**
+
+## Git Commit
+> `git commit -m "Commit Message"`
+
+> `git commit -a -m "Commit Message"` **Git Commit without Stage**
+
+1. This commit works only for tracked files
+2. If there are any untracked files, those files will not be added to the staging area.
+
+## Git Status
+> `git status`
+
+> `git status --short`
+
+Note: Short status flags are:
+1. ?? - Untracked files
+2. A - Files added to stage
+3. M - Modified files
+4. D - Deleted files
+
 ## Temporary remove your unstaged code
 > `git stash`
 
