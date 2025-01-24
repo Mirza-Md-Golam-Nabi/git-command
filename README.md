@@ -18,6 +18,8 @@ Example: **git push origin master** (branch_name = master)
 ## Version Check
 > `git --version`
 
+> `git -v`
+
 ## Configure Git
 > `git config --global user.name "nabi"`
 
@@ -104,3 +106,5 @@ Unstaged your code from staged changes:
 
 Remove untracked file with directories
 > `git clean -fd`
+
+-f = Force, -d = Directories
