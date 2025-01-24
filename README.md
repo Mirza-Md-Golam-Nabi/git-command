@@ -82,10 +82,33 @@ Example: **git reset --hard abc123** (SHA_hash_no = abc123)
 
 Example: **git branch dev** (branch_name = dev)
 
+> `git switch -c branch_name`
+
+Example: **git switch -c dev** (branch_name = dev)
+
+## Switch a branch
+> `git checkout branch_name`
+
+Example: **git checkout dev**
+
+***N.B.*** This is old version, try to **avoid** this.
+
+> `git switch branch_name`
+
+Example: **git switch dev**
+
+***N.B.*** This is latest version, try to **follow** this.
+
 ## Create a new branch with a copy of another branch
 > `git checkout -b new_branch_name copy_branch_name` **(-b = branch)**
 
-Example: **git checkout -b dev master** (new_branch_name = dev & copy_branch_name = master)
+Example: **git checkout -b dev master** 
+
+> `git switch -c new_branch_name copy_branch_name`
+
+Example: **git switch -c dev master** 
+
+new_branch_name = dev & copy_branch_name = master
 
 ## Delete a branch
 > `git branch -d branch_name` **for soft delete**
