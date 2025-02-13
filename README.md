@@ -233,3 +233,43 @@ git clean -fd
 ```
 
 ***N.B.*** f = Force, -d = Directories
+
+## Git Log
+#### Basic usage:
+```sh
+git log
+```
+
+#### One-line summary per commit
+```sh
+git log --oneline
+```
+
+#### Graph of branch history
+```sh
+git log --graph --oneline
+```
+
+#### Show specific number of commits
+```sh
+git log -n <number>
+```
+Example: **git log -n 5**
+
+#### Filter by author
+```sh
+git log --author="Author Name"
+```
+Example: **git log --author="Nabi"**
+
+#### Limit to a specific file
+```sh
+git log <file>
+```
+Example: **git log app/User.php**
+
+#### Filter by date
+```sh
+git log --since="YYYY-MM-DD" --until="YYYY-MM-DD"
+```
+Example: **git log --since="2024-10-01" --until="2024-10-31"**
