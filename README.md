@@ -114,13 +114,42 @@ git stash
 git stash pop
 ```
 
-## Remove last commit from local and push it in git remote
+## Remove last commit
+### \## To delete the last commit but keep the changes unstaged:
+```sh
+git reset --soft HEAD~1
+```
+**N.B.:** This removes the commit but keeps all modified files in the working directory.
+
+### \## To delete the last commit completely
 ```sh
 git reset --hard HEAD~1
 ```
+⚠️**Warning:** This will permanently delete any changes made in the last commit.
 
+### \## To delete the last commit from local and remote
 ```sh
+git reset --hard HEAD~1
 git push origin +HEAD
+```
+Or
+```sh
+git push origin --force
+```
+**N.B.:** This forcefully removes the commit from both your local and remote repository.
+
+### \## To edit the last commit message
+```sh
+git commit --amend -m "New commit message"
+```
+**N.B.:** This modifies the last commit message without changing the commit itself.
+
+### \## Undo the last commit and modify files before recommitting
+```sh
+git reset --soft HEAD~1
+# Edit files if needed
+git add .
+git commit -m "Updated commit with new changes"
 ```
 
 ## Rollback to the last commit
