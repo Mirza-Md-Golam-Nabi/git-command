@@ -8,6 +8,7 @@
 - [Push a branch](#push-a-branch-️)
 - [GIT Staging](#git-staging-environment-️)
 - [GIT Commit](#git-commit-️)
+- [GIT Amend](#git-amend-️)
 - [GIT Status](#git-status-️)
 - [GIT Stash](#temporary-remove-your-unstaged-code-️)
 - [Get back your stash code](#get-back-your-stash-code-️)
@@ -108,6 +109,50 @@ git commit -a -m "Commit Message"
 
 1. This commit works only for tracked files
 2. If there are any untracked files, those files will not be added to the staging area.
+
+## Git Amend ([⬆️](#git-command))
+***git commit --amend*** is used to modify the most recent commit in Git.
+
+**Change the commit message:**
+```sh
+git commit --amend -m "New commit message"
+```
+
+**Add forgotten files to the last commit:**
+```sh
+git add --all && git commit --amend --no-edit
+```
+
+Or
+
+**If you want to update tracked file, you can use this command:**
+```sh
+git commit -a --amend --no-edit
+```
+
+**Update author information:**
+```sh
+git commit --amend --author="Your Name <your.email@example.com>"
+```
+
+**Example:**
+Suppose you committed with the wrong user details and want to update them to:
+
+* Name: John Doe
+* Email: john.doe@example.com
+```sh
+git commit --amend --author="John Doe <john.doe@example.com>"
+```
+
+**If the commit is already pushed to a remote repository, use --force carefully:**
+```sh
+git push --force
+```
+
+**Safer alternative:**
+```sh
+git push --force-with-lease
+```
 
 ## Git Status ([⬆️](#git-command))
 **For Details**
