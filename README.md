@@ -1,6 +1,28 @@
 # GIT-Command
 
-## Version Check
+- [Version Check](#version-check-️)
+- [Configure](#configure-git-️)
+- [Initialize](#initialize-git-️)
+- [Clone a GIT Repository](#copy-or-clone-a-git-repository-️)
+- [Pull a branch](#pull-a-branch-️)
+- [Push a branch](#push-a-branch-️)
+- [GIT Staging](#git-staging-environment-️)
+- [GIT Commit](#git-commit-️)
+- [GIT Status](#git-status-️)
+- [GIT Stash](#temporary-remove-your-unstaged-code-️)
+- [Get back your stash code](#get-back-your-stash-code-️)
+- [Remove last commit](#remove-last-commit-️)
+- [Rollback last commit](#rollback-to-the-last-commit-️)
+- [Branch List](#branch-list-️)
+- [Create new branch](#create-a-new-branch-️)
+- [Switch a branch](#switch-a-branch-️)
+- [Create a new branch with a copy of another branch](#create-a-new-branch-with-a-copy-of-another-branch-️)
+- [Delete a branch](#delete-a-branch-️)
+- [Restore code](#restore-your-code-️)
+- [Git Log](#git-log-️)
+
+
+## Version Check ([⬆️](#git-command))
 ```sh
 git --version
 ```
@@ -11,7 +33,7 @@ Or
 git -v
 ```
 
-## Configure Git
+## Configure Git ([⬆️](#git-command))
 ```sh
 git config --global user.name "nabi"
 ```
@@ -20,7 +42,7 @@ git config --global user.name "nabi"
 git config --global user.email "nabi@gmail.com"
 ```
 
-## Initialize Git
+## Initialize Git ([⬆️](#git-command))
 To initialize a repository with the default branch named **master** :
 ```sh
 git init
@@ -31,28 +53,28 @@ To initialize a repository with a branch named **main** :
 git init -b main
 ```
 
-## Copy or clone a GIT Repository
+## Copy or clone a GIT Repository ([⬆️](#git-command))
 ```sh
 git clone repository_link
 ```
 
 Example: **git clone https://github.com/Mirza-Md-Golam-Nabi/git-command.git**
 
-## Pull a branch
+## Pull a branch ([⬆️](#git-command))
 ```sh
 git pull origin branch_name
 ```
 
 Example: **git pull origin master** (branch_name = master)
 
-## Push a branch
+## Push a branch ([⬆️](#git-command))
 ```sh
 git push origin branch_name
 ```
 
 Example: **git push origin master** (branch_name = master)
 
-## Git Staging Environment
+## Git Staging Environment ([⬆️](#git-command))
 
 **Only for a single file**
 ```sh
@@ -74,7 +96,7 @@ git add -A
 git add .
 ```
 
-## Git Commit
+## Git Commit ([⬆️](#git-command))
 ```sh
 git commit -m "Commit Message"
 ```
@@ -87,7 +109,7 @@ git commit -a -m "Commit Message"
 1. This commit works only for tracked files
 2. If there are any untracked files, those files will not be added to the staging area.
 
-## Git Status
+## Git Status ([⬆️](#git-command))
 **For Details**
 ```sh
 git status
@@ -104,17 +126,17 @@ Note: Short status flags are:
 3. M - Modified files
 4. D - Deleted files
 
-## Temporary remove your unstaged code
+## Temporary remove your unstaged code ([⬆️](#git-command))
 ```sh
 git stash
 ```
 
-## Get back your stash code
+## Get back your stash code ([⬆️](#git-command))
 ```sh
 git stash pop
 ```
 
-## Remove last commit
+## Remove last commit ([⬆️](#git-command))
 ### \## To delete the last commit but keep the changes unstaged:
 ```sh
 git reset --soft HEAD~1
@@ -152,7 +174,7 @@ git add .
 git commit -m "Updated commit with new changes"
 ```
 
-## Rollback to the last commit
+## Rollback to the last commit ([⬆️](#git-command))
 **To find out SHA hash number**
 ```sh
 git reflog
@@ -164,7 +186,7 @@ git reset --hard SHA_hash_no
 
 Example: **git reset --hard abc123** (SHA_hash_no = abc123) 
 
-## Branch List
+## Branch List ([⬆️](#git-command))
 Get all local branches
 ```sh
 git branch
@@ -175,7 +197,7 @@ Get all local and remote branches
 git branch -a
 ```
 
-## Create a new branch
+## Create a new branch ([⬆️](#git-command))
 ```sh
 git branch branch_name
 ```
@@ -188,7 +210,7 @@ git switch -c branch_name
 
 Example: **git switch -c dev** (branch_name = dev)
 
-## Switch a branch
+## Switch a branch ([⬆️](#git-command))
 ```sh
 git checkout branch_name
 ```
@@ -210,7 +232,7 @@ git switch -
 ```
 ***N.B.*** To switch to the previous branch.
 
-## Create a new branch with a copy of another branch
+## Create a new branch with a copy of another branch ([⬆️](#git-command))
 
 ```sh
 git checkout -b new_branch_name copy_branch_name
@@ -227,7 +249,7 @@ Example: **git switch -c dev master**
 
 new_branch_name = dev & copy_branch_name = master
 
-## Delete a branch
+## Delete a branch ([⬆️](#git-command))
 **For soft delete**
 ```sh
 git branch -d branch_name
@@ -238,14 +260,14 @@ git branch -d branch_name
 git branch -D branch_name
 ```
 
-## Delete a branch from remote
+**Delete a branch from remote**
 ```sh
 git push origin --delete branch_name
 ```
 
 Example: **git push origin --delete dev** (branch_name = dev)
 
-## Restore your code
+## Restore your code ([⬆️](#git-command))
 Restoring unstaged changes:
 ```sh
 git restore .
@@ -263,7 +285,7 @@ git clean -fd
 
 ***N.B.*** f = Force, -d = Directories
 
-## Git Log
+## Git Log ([⬆️](#git-command))
 #### Basic usage:
 ```sh
 git log
