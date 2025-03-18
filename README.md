@@ -5,6 +5,7 @@
 - [Initialize](#initialize-git-️)
 - [Clone a GIT Repository](#copy-or-clone-a-git-repository-️)
 - [Pull a branch](#pull-a-branch-️)
+- [Fetch a branch](#fetch-a-branch-️)
 - [Push a branch](#push-a-branch-️)
 - [GIT Staging](#git-staging-environment-️)
 - [GIT Commit](#git-commit-️)
@@ -67,6 +68,13 @@ git pull origin branch_name
 ```
 
 Example: **git pull origin master** (branch_name = master)
+
+## Fetch a branch ([⬆️](#git-command))
+```sh
+git fetch origin && git checkout <remote-branch-name>
+```
+
+Example: **git fetch origin && git checkout feature/login**
 
 ## Push a branch ([⬆️](#git-command))
 ```sh
@@ -235,6 +243,11 @@ Example: **git reset --hard abc123** (SHA_hash_no = abc123)
 Get all local branches
 ```sh
 git branch
+```
+
+Get all remote branches
+```sh
+git branch -r
 ```
 
 Get all local and remote branches
