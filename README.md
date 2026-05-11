@@ -184,9 +184,38 @@ Note: Short status flags are:
 git stash
 ```
 
+***Good Practice***
+If you have many stashes, it becomes hard to identify them. So, use a message while creating a stash.
+```sh
+git stash push -m "login page fix"
+```
+
+
 ## Get back your stash code ([⬆️](#git-command))
 ```sh
 git stash pop
+```
+
+### Delete Stash
+Show all stash list
+```sh
+git stash list
+```
+
+#### Output like this
+```sh
+stash@{0}: WIP on main: abc123
+stash@{1}: WIP on dev: def456
+```
+
+#### Delete a specific list
+```sh
+git stash drop stash@{0}
+```
+
+#### Delete all stash
+```sh
+git stash clear
 ```
 
 ## Remove last commit ([⬆️](#git-command))
